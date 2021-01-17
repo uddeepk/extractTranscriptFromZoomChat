@@ -1,3 +1,0 @@
-/home/uddeepk/CLionProjects/extractWebsiteFromChat/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/uddeepk/CLionProjects/extractWebsiteFromChat/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/uddeepk/CLionProjects/extractWebsiteFromChat/cmake-build-debug/CMakeFiles/extractWebsiteFromChat.dir

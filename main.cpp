@@ -39,7 +39,7 @@ int main() {
 
         std::regex_match( messageLine, base_match, base_regex);
 
-        cout << base_match.size() << endl;
+        //cout << base_match.size() << endl;
 
         //cout << base_match[1].str() << endl; //because [0] is whole string match
         //Instead we are pushing back to the vector contentsOfTheMessages

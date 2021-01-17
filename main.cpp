@@ -33,7 +33,32 @@ int main() {
     string messageLine;
     vector <string> contentsOfTheMessages;
 
-    while ( getline(myFile, messageLine))
+    while ( getline(myFile, messageLine)) {
+        std::regex base_regex(".*:.*:.*:\\s(.*)");
+        std::smatch base_match;
+
+        std::regex_match( messageLine, base_match, base_regex);
+
+        cout << base_match.size() << endl;
+
+        //cout << base_match[1].str() << endl; //because [0] is whole string match
+        //Instead we are pushing back to the vector contentsOfTheMessages
+
+        contentsOfTheMessages.push_back( base_match[1].str());
+    }
+    myFile.close();
+
+    //Create output file stream.
+
+    std::ofstream myOutFile ( "myMessages.txt" , std::ofstream::out);
+
+    for ( const auto &a : contentsOfTheMessages) {
+        myOutFile << a << endl;
+    }
+
+    myOutFile.close();
+
+
     return 0;
 }
 
